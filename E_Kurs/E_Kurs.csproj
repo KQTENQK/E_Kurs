@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF3F4378-6241-4A02-9E5C-36C10AFB1BEC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>E_Kurs</RootNamespace>
+    <AssemblyName>E_Kurs</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrator.cs" />
+    <Compile Include="AdministratorPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorPanel.Designer.cs">
+      <DependentUpon>AdministratorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoughtSuccessfullyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoughtSuccessfullyForm.Designer.cs">
+      <DependentUpon>BoughtSuccessfullyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuyedByModels.cs" />
+    <Compile Include="ClientContext.cs" />
+    <Compile Include="DefaultClient.cs" />
+    <Compile Include="InvalidSignUpData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvalidSignUpData.Designer.cs">
+      <DependentUpon>InvalidSignUpData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs" />
+    <Compile Include="ModelsContext.cs" />
+    <Compile Include="RemoveUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveUserForm.Designer.cs">
+      <DependentUpon>RemoveUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpModerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpModerator.Designer.cs">
+      <DependentUpon>SignUpModerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeratorPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModeratorPanel.Designer.cs">
+      <DependentUpon>ModeratorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemovedSuccessfully.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemovedSuccessfully.Designer.cs">
+      <DependentUpon>RemovedSuccessfully.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SighUpAdministratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SighUpAdministratorForm.Designer.cs">
+      <DependentUpon>SighUpAdministratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Moderator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SomethingWentWrongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SomethingWentWrongForm.Designer.cs">
+      <DependentUpon>SomethingWentWrongForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessfullyAddedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessfullyAddedForm.Designer.cs">
+      <DependentUpon>SuccessfullyAddedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessfulSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessfulSignUp.Designer.cs">
+      <DependentUpon>SuccessfulSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="UserAlreadyExistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAlreadyExistForm.Designer.cs">
+      <DependentUpon>UserAlreadyExistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDoesntExistError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDoesntExistError.Designer.cs">
+      <DependentUpon>UserDoesntExistError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel.Designer.cs">
+      <DependentUpon>UserPanel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdministratorPanel.resx">
+      <DependentUpon>AdministratorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoughtSuccessfullyForm.resx">
+      <DependentUpon>BoughtSuccessfullyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvalidSignUpData.resx">
+      <DependentUpon>InvalidSignUpData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveUserForm.resx">
+      <DependentUpon>RemoveUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpModerator.resx">
+      <DependentUpon>SignUpModerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModeratorPanel.resx">
+      <DependentUpon>ModeratorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemovedSuccessfully.resx">
+      <DependentUpon>RemovedSuccessfully.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SighUpAdministratorForm.resx">
+      <DependentUpon>SighUpAdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SomethingWentWrongForm.resx">
+      <DependentUpon>SomethingWentWrongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessfullyAddedForm.resx">
+      <DependentUpon>SuccessfullyAddedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessfulSignUp.resx">
+      <DependentUpon>SuccessfulSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAlreadyExistForm.resx">
+      <DependentUpon>UserAlreadyExistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDoesntExistError.resx">
+      <DependentUpon>UserDoesntExistError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel.resx">
+      <DependentUpon>UserPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
